@@ -50,9 +50,9 @@ combine()
 .pipe(process.stdout)
 ```
 
-### combine.pipe(dest, src)
+### combine.pipe(dest [, options])
 
-`combine` itself is a stream,
+`combine` itself is a readable stream,
 so you should probably use `combine.pipe(dest)`.
 
 ## License
