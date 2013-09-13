@@ -21,6 +21,7 @@ Combine.prototype.busy = false
 
 Combine.prototype.append = function (stream) {
   if (!this._writableState.ended
+    && !this.destroyed
     && this.queue.push(stream) === 1
     && !this.busy
   ) this._next()
@@ -78,6 +79,7 @@ Combine.prototype._next = function (obj) {
 
   if (obj === null) {
     this.end()
+    this.queue = null
   } else if (obj === undefined) {
     // Just ignore
   } else if (typeof obj === 'string' || Buffer.isBuffer(obj)) {
