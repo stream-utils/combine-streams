@@ -1,7 +1,7 @@
 {
   "name": "combine-streams",
   "description": "Append streams and data into one mother stream",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
