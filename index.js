@@ -23,6 +23,7 @@ Combine.prototype.destroyed = false
 Combine.prototype.append = function (stream) {
   if (!this._writableState.ended
     && !this.destroyed
+    && !~this.queue.indexOf(null)
     && this.queue.push(stream) === 1
     && !this.busy
   ) this._next()
