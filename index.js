@@ -18,6 +18,7 @@ function Combine(options) {
 }
 
 Combine.prototype.busy = false
+Combine.prototype.destroyed = false
 
 Combine.prototype.append = function (stream) {
   if (!this._writableState.ended
