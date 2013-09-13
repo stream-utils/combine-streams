@@ -1,5 +1,5 @@
 {
-  "name": "stream-to",
+  "name": "combine-streams",
   "description": "Append streams and data into one mother stream",
   "version": "0.0.1",
   "author": {
