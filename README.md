@@ -1,4 +1,4 @@
-# Combine Streams [![Build Status](https://travis-ci.org/jonathanong/combine-streams.png)](https://travis-ci.org/jonathanong/combine-streams)
+# Combine Streams [![Build Status](https://travis-ci.org/stream-utils/combine-streams.png)](https://travis-ci.org/stream-utils/combine-streams)
 
 Basically a streams2 version of [combined-stream](https://github.com/felixge/node-combined-stream).
 Allows you to combine streams as well as strings and buffers into a single stream.
