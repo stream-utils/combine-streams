@@ -39,7 +39,7 @@ Combine.prototype.destroy = function () {
   }
 }
 
-Combine.prototype._append = function (stream) {
+Combine.prototype._appendStream = function (stream) {
   this.busy = true
 
   stream.pipe(this, {
@@ -101,7 +101,7 @@ Combine.prototype._next = function (obj) {
       }
     })
   } else if (obj instanceof Stream) {
-    this._append(obj)
+    this._appendStream(obj)
   } else {
     throw new TypeError('You can only append streams, strings, buffers, and functions.')
   }
