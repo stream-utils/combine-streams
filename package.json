@@ -2,29 +2,22 @@
   "name": "combine-streams",
   "description": "Append streams and data into one mother stream",
   "version": "0.0.4",
-  "author": {
-    "name": "Jonathan Ong",
-    "email": "me@jongleberry.com",
-    "url": "http://jongleberry.com",
-    "twitter": "https://twitter.com/jongleberry"
-  },
+  "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stream-utils/combine-streams.git"
-  },
-  "bugs": {
-    "mail": "me@jongleberry.com",
-    "url": "https://github.com/stream-utils/combine-streams/issues"
-  },
+  "repository": "stream-utils/combine-streams",
   "devDependencies": {
-    "mocha": "~1.12",
+    "mocha": "2",
+    "istanbul": "0",
     "cat-stream": "*"
   },
   "scripts": {
-    "test": "make test"
+    "test": "mocha --reporter spec",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
   },
-  "engines": {
-    "node": ">= 0.10.0"
-  }
+  "keywords": [
+    "concatenate",
+    "stream"
+  ],
+  "files": ["index.js"]
 }

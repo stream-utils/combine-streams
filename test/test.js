@@ -2,7 +2,7 @@ var assert = require('assert')
 var Stream = require('stream')
 var cat = require('cat-stream')
 
-var combine = require('./')
+var combine = require('..')
 
 var fixtures = {
   string: 'string',
